@@ -4,23 +4,14 @@
     <link rel="stylesheet" href="/static/styles/home.css">
 
     <script src="/static/js/desire_small.js"></script>
+    <script src="/static/js/video.js"></script>
 {{end}}
 
 {{define "content"}}
     <section class="interest">
-<!--         <div class="left">
-            <img src="/static/img/valentin_am_baum.jpeg" alt="">
-        </div>
 
-        <div class="mid">
-            <img src="/static/img/valentin_heckenschnitt.jpg" alt="">
-        </div>
-
-        <div class="right">
-            <img src="/static/img/valentin_motorsense.jpg" alt="">
-        </div> -->
         <div class="overlay"></div>
-        <video autoplay loop muted preload="auto">
+        <video autoplay loop muted preload="auto" poster="/static/img/placeholder.png">
             <source src="/static/img/Home_Vid.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video> 

@@ -1,10 +1,8 @@
-.kontakt-kontakt {
-    padding-left: 150px;
-}
-
 .kontakt-wrapper {
     height: 640px;
     width: 100%;
+
+    background-color: var(--background-color);
 
     display: flex;
     align-items: center;
@@ -20,11 +18,11 @@
     }
 
     .kontakt {
-        height: 500px;
+        min-height: 500px;
     
         display: flex;
         justify-content: flex-start; /* Align items horizontally to start from the left */
-        align-items: flex-start; /* Align items vertically to start from the top */
+        align-items: center; /* Align items vertically to start from the top */
 
     
         border: 1px solid var(--accent-color);
@@ -44,8 +42,8 @@
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: flex-start; /* Align content to the top */
-       
-        
+                
+                width: 100%;
                 height: 100%;
 
                 h1 {
@@ -64,14 +62,16 @@
         .contact-form {
             max-width: 500px;
             padding: 50px 70px 50px 70px;
+            align-self: start;
     
             h3 {
                 color: var(--main-color);
                 margin: 0px;
+                align-self: start;
             }
         
             form {
-                width:400px;
+                min-width: 400px;
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
@@ -96,9 +96,56 @@
             }
         }
     }
-    @media (max-width: 500px) {
+}
+@media (max-width: 1000px) {
+    .kontakt-wrapper  {
+        height: auto;
+        padding: 45px;
+        box-sizing: border-box;
+        flex-direction: column;
+
         .kontakt {
             flex-direction: column;
+            width: 100%;
+
+            .contact-data-wrapper {
+                height: auto;
+                width: 100%;
+            }
+
+            .contact-form {
+                min-height: 400px;
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .kontakt-wrapper  {
+        padding: 0px;
+        overflow: hidden;
+        box-sizing: border-box;
+        
+
+        .kontakt {
+            flex-direction: column;
+            width: 100%;
+            border-radius: 0px;
+            border: none;
+
+            .contact-data-wrapper {
+                height: auto;
+                width: 100%;
+                border-radius: 0px;
+            }
+
+            .contact-form {
+                padding: 45px 35px;
+                min-height: 400px;
+
+                form {
+                    min-width: 80vw;
+                }
+            }
         }
     }
 }

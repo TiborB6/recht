@@ -4,13 +4,13 @@ go:
 	reflex -s -v go run cmd/server/main.go
 
 run: 
-	docker build -t baum-server . 
-	docker run -p 3000:3000 baum-server
+	sudo docker build -t baum-server . 
+	sudo docker run -p 3000:3000 baum-server
 
 docker:
-	docker build -t baum-server .
-	docker tag baum-server tiborb6/baum-server
-	docker push tiborb6/baum-server:latest
+	sudo docker build -t baum-server .
+	sudo docker tag baum-server tiborb6/baum-server
+	sudo docker push tiborb6/baum-server:latest
 
 launch:
 	sudo yum update -y 
