@@ -4,7 +4,7 @@ import "gopkg.in/gomail.v2"
 
 func SendEmail(mailData ContactModelForm) error {
 	m := gomail.NewMessage()
-	m.SetHeader("From", mailData.Email)
+	m.SetHeader("From", "v.stoelner@gmx.at")
 	m.SetHeader("To", "v.stoelner@gmx.at")
 	m.SetHeader("Subject", "Gartenpflege Anfrage")
 
@@ -15,9 +15,9 @@ func SendEmail(mailData ContactModelForm) error {
 		<br>
 		<p>` + mailData.Message + `</p>`
 
-	m.SetBody("text /html", bodyText)
+	m.SetBody("text/html", bodyText)
 
-	d := gomail.NewDialer("mail.gmx.net", 587, "v.stoelner@gmx.at", "Hagyma105w12!")
+	d := gomail.NewDialer("mail.gmx.net", 587, "v.stoelner@gmx.at", "DerNeger123!")
 
 	if err := d.DialAndSend(m); err != nil {
 		return err

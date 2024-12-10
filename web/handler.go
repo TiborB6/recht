@@ -22,7 +22,7 @@ func NewHandler() *Handler {
 	h.Get("/", h.Home())
 	h.Get("/services", h.Services())
 	h.Get("/kontakt", h.Kontakt())
-	h.Post("/kontakts", h.Mail())
+	h.Post("/kontakt", h.Mail())
 
 	h.Route("/legal", func(r chi.Router) {
 		r.Get("/agb", legal.AGB())
