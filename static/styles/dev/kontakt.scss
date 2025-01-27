@@ -1,5 +1,5 @@
 .kontakt-wrapper {
-    height: 640px;
+    height: 750px;
     width: 100%;
 
     background-color: var(--background-color);
@@ -24,15 +24,14 @@
         justify-content: flex-start; /* Align items horizontally to start from the left */
         align-items: center; /* Align items vertically to start from the top */
 
-    
-        border: 1px solid var(--accent-color);
+        border: 1px solid var(--accent2-color);
         border-radius: 16px;
         box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     
         .contact-data-wrapper {
             height: 500px;
             padding: 50px;
-            border: 1px solid var(--accent-color);
+            border: 1px solid var(--accent2-color);
             border-radius: 16px;
             background-color: var(--highlight-color);    
             box-sizing: border-box;

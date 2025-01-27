@@ -1,7 +1,9 @@
 :root {
     --main-color: black;
     --background-color: white;
+    --background2-color:    #202020 ;
     --accent-color:#555;
+    --accent2-color: #999;
     --highlight-color: #465772;
     --error-color: #cc0000;
 
@@ -43,15 +45,18 @@ body {
     background-color: var(--background-color);
 
     width: 100%;
-    height: 70px;
+    height: 90px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    border-bottom-style: solid;
-    border-bottom-color: var(--accent-color);
-    border-bottom-width: 1px;
+
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+    /*     border-bottom-style: solid;
+        border-bottom-color: var(--accent-color);
+        border-bottom-width: 1px;  */
 
     z-index: 100;
 
@@ -69,8 +74,8 @@ body {
 
         a {
             img {
-                width: 180px;
-                height: 100px; /* Define the height */
+                width: 240px;
+                height: auto; /* Define the height */
             }
         }
     }
@@ -351,20 +356,16 @@ body {
 }
 
 .content {
-    margin-top: 70px;
+    margin-top: 90px;
 }
 
 .footer {
-    height: 200px;
+    height: 300px;
 
-    padding: 10px 50px 50px 50px;    
+    padding: 25px 50px 50px 50px;    
 
-    color: var(--accent-color);
-
-    border-top-style: solid;
-    border-top-color: var(--accent-color);
-    border-top-width: 1px;
-
+    color: var(--accent2-color);
+    background-color: var(--main-color);
 
     h3 {
         font-weight: 600;
@@ -375,12 +376,12 @@ body {
 
     a {
         text-decoration: none; /* Remove underline */
-        color: var(--accent-color); /* Change color */
+        color: var(--accent2-color); /* Change color */
         transition: color 0.2s ease;
 
         &:hover {
             /* Optional: Change color on hover */
-            color: var(--main-color);
+            color: var(--background-color);
         }
     }
 
@@ -388,7 +389,7 @@ body {
         padding-top: 18.72px;
 
         img {
-            width: 180px;
+            width: 250px;
             height: auto;
         }
 
@@ -468,8 +469,11 @@ body {
     .footer {
         padding: 10px;
 
-        img {
-            width: 120px;
+        .left {
+            img {
+                width: 180px;
+                height: auto;
+            }
         }
     }
 }

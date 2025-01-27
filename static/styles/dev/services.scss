@@ -3,13 +3,22 @@
     div {
         width: 100%;
         box-sizing: border-box;
+
         h1 {
             font-size: 32pt;
             color: var(--highlight-color);
-            padding: 30px;
-            border-bottom: 1px solid var(--accent-color);
+            padding: 30px 60px;
             width: 100%;
             box-sizing: border-box;
+            text-align: center;
+            color: var(--main-color)
+        }
+
+        hr {
+            width: 100px;
+            height: 3px;
+            background-color: var(--highlight-color);
+            border-radius: 1px;
         }
     }
 
@@ -21,14 +30,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 30px; 
+        gap: 60px; 
 
         section {
-            height: 300px;
-            width: 90%;
+            height: 350px;
+            width: 80%;
             display: flex;
 
-            border: 1px solid var(--accent-color);
+            border: 1px solid var(--accent2-color);
             border-radius: 16px;
             box-shadow: 0 15px 15px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 
@@ -51,7 +60,8 @@
 
                 p {
                     color: var(--accent-color);
-                    margin: 0px;;
+                    margin: 0px;
+                    line-height: 25px;
                 }
 
 
@@ -106,30 +116,44 @@
             h1 {
                 font-size: 32px;
             }
+
+            hr {
+                margin-bottom: 30px;
+            }
         }
 
 
         .service-wrapper {
             padding: 0px;
             gap: 0px;
+            height: auto;
 
             section {
-                width: 100%;
+                width: 100%;        
                 border: none;
+                min-height: 300px;
+                height: auto;
                 border-radius: 0px;
                 box-shadow: none;
                 border-top: 1px solid var(--accent-color);
 
                 .left {
-                    flex: 1;
-                    width: auto;
+                    flex: 0.8;
+
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)!important;
+
                 }
 
                 .right {
-                    padding: 20px 20px;
+                    padding: 25px 25px;
                     width: 225px;
                     flex: none;
                     gap: 15px;
+
+                    p {
+                        font-size: 14px;
+                        line-height: 25px;
+                    }
 
                 }
 
@@ -137,11 +161,14 @@
                     font-size: 24px!important;
                 }
 
-                p {
-                    font-size: 14px;
-                }
+                
             }
 
+        }
+
+        .service-wrapper section:nth-child(3) .left img {
+            object-position: 40% 10%;
+            transform: scale(2)!important;
         }
 
     }
