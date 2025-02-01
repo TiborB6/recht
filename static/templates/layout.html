@@ -20,12 +20,18 @@
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16816029500"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-16816029500'); </script> 
+    
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'AW-16816029500');
+        gtag("event", "form_submit", {
+            form_id: "",
+            form_name: null,
+            form_destination: "https://garten-stoelner.at/kontakt",
+            form_length: 5,
+            form_submit_text: undefined,
+            event_callback: "Function",
+            send_to: "AW-16816029500"
+        })
     </script>
 
     {{block "header" . }}{{end}}
