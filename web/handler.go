@@ -83,7 +83,7 @@ func (h *Handler) Mail() http.HandlerFunc {
 
 		err := SendEmail(form)
 		if err != nil {
-			panic(err)
+			fmt.Print(err)
 		}
 
 		tmplSuccess.Execute(w, nil)
