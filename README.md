@@ -1,7 +1,7 @@
 This is a university project for data and information law.
 
 # Host
-[Link text](https://fein-app.com)
+[Website](https://fein-app.com)
 
 # Installation
 For arm64
