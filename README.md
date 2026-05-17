@@ -1,7 +1,7 @@
 This is a university project for data and information law.
 
 # Host
-[Website](https://fein-app.com)
+[Website](https://queso.at)
 
 # Installation
 For arm64
