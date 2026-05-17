@@ -12,5 +12,5 @@ func main() {
 	h := web.NewHandler()
 	http.Handle("/", h)
 
-	http.ListenAndServe(":3000", nil)
+	http.ListenAndServe(":3002", nil)
 }

@@ -1,0 +1,78 @@
+{{define "header"}}
+    <link rel="stylesheet" href="/static/styles/shop.css">
+{{end}}
+
+{{define "content"}}
+<div>
+    <h1>Unsere Software-Lizenzen</h1>
+    <hr>
+
+    <div class="service-wrapper">
+        <!-- TreeScan Basic -->
+        <section>
+            <div class="left">
+                <img src="/static/img/pexels-valentyna-ivanova-1444038-30851820.jpg" alt="TreeScan Basic Vorschau">
+            </div>
+            <div class="right">
+                <h3>TreeScan Basic</h3>
+                <p>Für Einzelanwender & kleine Betriebe.</p>
+                <ul>
+                    <li>50 Baum-Analysen/Monat</li>
+                    <li>PDF-Export</li>
+                    <li>Desktop-App</li>
+                </ul>
+                <p class="price">€ 29,– / Monat</p>
+                <a href="javascript:void(0)"><button class="buy-btn" data-product="Basic">Jetzt kaufen</button></a>
+            </div>
+        </section>
+
+        <!-- TreeScan Pro -->
+        <section>
+            <div class="left">
+                <img src="/static/img/pexels-quang-nguyen-vinh-222549-2132171.jpg" alt="TreeScan Pro Vorschau">
+            </div>
+            <div class="right">
+                <h3>TreeScan Pro</h3>
+                <p>Für professionelle Baumkontrolleure.</p>
+                <ul>
+                    <li>Unbegrenzte Analysen</li>
+                    <li>Drohnen-Integration</li>
+                    <li>5 Benutzerkonten</li>
+                </ul>
+                <p class="price">€ 79,– / Monat</p>
+                <a href="javascript:void(0)"><button class="buy-btn" data-product="Pro">Jetzt kaufen</button></a>
+            </div>
+        </section>
+
+        <!-- TreeScan Enterprise -->
+        <section>
+            <div class="left">
+                <img src="/static/img/pexels-martin-wischeropp-746841803-25650362.jpg" alt="TreeScan Enterprise">
+            </div>
+            <div class="right">
+                <h3>TreeScan Enterprise</h3>
+                <p>Für Gemeinden & Forstbetriebe.</p>
+                <ul>
+                    <li>GIS-Kartenanbindung</li>
+                    <li>Prioritäts-Support (24/7)</li>
+                    <li>Maßgeschneiderte APIs</li>
+                </ul>
+                <p class="price">€ 199,– / Monat</p>
+                <a href="javascript:void(0)"><button class="buy-btn" data-product="Enterprise">Jetzt kaufen</button></a>
+            </div>
+        </section>
+    </div>
+
+    <div class="checkout-note">
+        <p>Dies ist ein Mock-Shop. Nach Klick auf „Kaufen“ erscheint eine Demo-Bestellbestätigung.</p>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.buy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            alert(`Vielen Dank für Ihre Bestellung! (Mock) – Sie erhalten eine Rechnung per E-Mail.`);
+        });
+    });
+</script>
+{{end}}

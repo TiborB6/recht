@@ -1,10 +1,77 @@
 {{define "header"}}
-<link rel="stylesheet" href="/static/styles/legal.css">
+    <link rel="stylesheet" href="/static/styles/legal.css">
 {{end}}
 
 {{define "content"}}
-<h1>Datenschutz</h1>
-<p>Die Website nutzt keine Cookies</p>
-<p>Ihre Daten werden nicht gespeichert</p>
-<p>Die Daten mit den Sie mit uns Kontakt aufnehmen, werden an uns per Email geschickt und nur für die Kontaktaufnahme genutzt.</p>
+<div class="privacy-container">
+    <h1>Datenschutzerklärung</h1>
+    <p class="last-updated">Stand: 16. Mai 2026</p>
+
+    <section>
+        <h2>1. Verantwortlicher</h2>
+        <p>
+            Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
+            <strong>Gartenpflege Stölner Software GmbH</strong><br>
+            Nehammergasse 12, 1010 Wien, Österreich<br>
+            E-Mail: <a href="mailto:v.stoelner@gmx.at">v.stoelner@gmx.at</a><br>
+            Telefon: +43 1 2345678
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Welche Daten wir verarbeiten und zu welchem Zweck</h2>
+        
+        <h3>2.1 Zugriffsdaten</h3>
+        <p>Es werden keine Anfragen vom Backend geloggt und es erfolgt keine Datenerhebung</p>
+
+        <h3>2.2 Kontaktformular</h3>
+        <p>Auf unserer <a href="/kontakt">Kontaktseite</a> befindet sich ein Formular zur Anfrage. Dem wurden die Rechte entzogen Emails zu verschicken sollte sie jemals aktiviert werden. Erhebt sie folgende Daten:</p>
+        <ul>
+            <li>Name</li>
+            <li>E-Mail-Adresse</li>
+            <li>Telefon (optional)</li>
+            <li>Betreff und Nachrichtentext</li>
+        </ul>
+        <p>Zweck: Beantwortung Ihrer Anfrage.<br>
+        Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) bzw. lit. f (berechtigtes Interesse).<br>
+        Das Kontaktformular versendet eine Email an uns und die Daten werden nicht ausserhalb des üblichen Emailverkehrs verwendet und werden nur verwendet um mit Ihnen Kontakt aufnehmen zu können.</p>
+
+
+        <h3>2.3 Cookies und ähnliche Technologien</h3>
+        <p>Die Website erhebt keine Cookies und leitet auch keine Daten an Dritte weiter./p>
+
+        <h3>2.4 Shop-Funktionen</h3>
+        <p>Unser Shop ist als Demo (Mock) implementiert. Es werden keine Bestelldaten, Zahlungsinformationen oder Adressdaten tatsächlich erhoben oder gespeichert. Bei Klick auf „Jetzt kaufen“ erscheint lediglich ein Hinweisfenster. Im produktiven Betrieb würden wir Ihre Daten zur Vertragsabwicklung (Name, Adresse, E-Mail, Zahlungsdaten) verarbeiten, an Zahlungsdienstleister weitergeben und für gesetzliche Aufbewahrungspflichten speichern.</p>
+    </section>
+
+    <section>
+        <h2>3. Ihre Rechte als betroffene Person</h2>
+        <p>Sie haben jederzeit folgende Rechte gegenüber dem Verantwortlichen:</p>
+        <ul>
+            <li>Auskunft über Ihre gespeicherten Daten (Art. 15 DSGVO)</li>
+            <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+            <li>Löschung Ihrer Daten, sofern keine Aufbewahrungspflichten entgegenstehen (Art. 17 DSGVO)</li>
+            <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+            <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+            <li>Widerspruch gegen die Verarbeitung aufgrund berechtigter Interessen (Art. 21 DSGVO)</li>
+            <li>Widerruf Ihrer Einwilligung mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)</li>
+        </ul>
+        <p>Zur Ausübung Ihrer Rechte kontaktieren Sie uns bitte unter <a href="mailto:v.stoelner@gmx.at">v.stoelner@gmx.at</a>.</p>
+    </section>
+
+    <section>
+        <h2>4. Aufbewahrungsdauer</h2>
+        <p>Wir verwahren Ihre Daten nur ein Jahr in unserem Emailfach, es werden am Ende des Monates alle Daten gelöscht die länger als ein Jahr in unserem Email fach sind.</p>
+    </section>
+
+    <section>
+        <h2>5. Sicherheit</h2>
+        <p>Wir verwenden eine SSL-/TLS-Verschlüsselung (erkennbar am „https://“ in der Adresszeile), um Ihre Daten bei der Übertragung zu schützen.</p>
+    </section>
+
+    <section>
+        <h2>7. Änderungen dieser Datenschutzerklärung</h2>
+        <p>Wir behalten uns vor, diese Erklärung bei Änderungen der Rechtslage oder unserer Dienste anzupassen. Die aktuelle Version steht immer auf dieser Seite abrufbar.</p>
+    </section>
+</div>
 {{end}}

@@ -5,50 +5,51 @@
 {{end}}
 
 {{define "content"}}
-<div class="kontakt-wrapper kontakt-kontakt">
-    <section class="kontakt">
-        <div class="contact-data-wrapper">
-            <div class="contact-data">
-                <h1>
-                    Hier erreichen Sie uns
-                </h1>
-                <p>v.stoelner@gmx.at</p>
-                <p>+43 676/3760838</p>
-                <p>2340 Mödling, Scheffergasse 20/6</p>
+    <div class="kontakt-wrapper kontakt-kontakt">
+        <section class="kontakt">
+            <div class="contact-data-wrapper">
+                <div class="contact-data">
+                    <h1>
+                        Hier erreichen Sie uns
+                    </h1>
+                    <p>v.stoelner@gmx.at</p>
+                    <p>+43 1 2345678</p>
+                    <p>1010 Wien, Nehammergasse 12</p>
+                </div>
             </div>
-        </div>
+            
+            <div class="contact-form">
+                <form action="/kontakt" method="post">
+                    {{.CSRF}}
+    
+                    <h3>Kontaktformular</h3>
+                    <div class="form-wrapper">
+                        <input id="name" name="name" type="text" class="required" {{if .Form.Errors.Name}} class="invalid" {{end}} placeholder="" value="" required>
+                        <div></div>
+                        <label for="name" class="required">Name*{{if .Form.Errors.Name}} - {{.Form.Errors.Name}} {{end}}</label>
+                    </div>
         
-        <div class="contact-form">
-            <form action="/kontakt" method="post">
-                {{.CSRF}}
-
-                <h3>Kontaktformular</h3>
-                <div class="form-wrapper">
-                    <input name="name" type="text" class="required" {{if .Form.Errors.Name}} class="invalid" {{end}} placeholder="" value="" required>
-                    <div></div>
-                    <label for="name" class="required">Name*{{if .Form.Errors.Name}} - {{.Form.Errors.Name}} {{end}}</label>
-                </div>
-    
-                <div class="form-wrapper">
-                    <input name="email" type="email" class="required" {{if .Form.Errors.Email}} class="invalid" {{end}} placeholder="" value="" required>
-                    <div></div>
-                    <label for="email" class="required">Email*{{if .Form.Errors.Email}} - {{.Form.Errors.Email}} {{end}}</label>
-                </div>
-    
-                <div class="form-wrapper">
-                    <input name="tel" type="tel" class="required" {{if .Form.Errors.Tel}} class="invalid" {{end}} placeholder="" value="" required>
-                    <div></div>
-                    <label for="tel" class="required">Telefon*{{if .Form.Errors.Tel}} - {{.Form.Errors.Tel}} {{end}}</label>
-                </div>
-    
-                <div class="form-wrapper">
-                    <textarea name="message" type="text" class="required" {{if .Form.Errors.Message}} class="invalid" {{end}} placeholder="Nachricht*" value="" required></textarea>
-                    <label for="message" class="required">{{if .Form.Errors.Message}} - {{.Form.Errors.Message}} {{end}}</label>
-                </div>
-    
-                <button type="submit">Senden</button>
-            </form>
-        </div>
-    </section>
-</div>
+                    <div class="form-wrapper">
+                        <input id="email" name="email" type="email" class="required" {{if .Form.Errors.Email}} class="invalid" {{end}} placeholder="" value="" required>
+                        <div></div>
+                        <label for="email" class="required">Email*{{if .Form.Errors.Email}} - {{.Form.Errors.Email}} {{end}}</label>
+                    </div>
+        
+                    <div class="form-wrapper">
+                        <input id="tel" name="tel" type="tel" class="required" {{if .Form.Errors.Tel}} class="invalid" {{end}} placeholder="" value="" required>
+                        <div></div>
+                        <label for="tel" class="required">Telefon*{{if .Form.Errors.Tel}} - {{.Form.Errors.Tel}} {{end}}</label>
+                    </div>
+        
+                    <div class="form-wrapper">
+                        <textarea id="message" name="message" type="text" class="required" {{if .Form.Errors.Message}} class="invalid" {{end}} placeholder="Nachricht*" value="" required></textarea>
+                        <label for="message" class="required" hidden="true">Nachricht {{if .Form.Errors.Message}} - {{.Form.Errors.Message}} {{end}}</label>
+                    </div>
+        
+                    <button type="submit">Senden</button>
+                </form>
+            </div>
+        </section>
+        
+    </div>
 {{end}}

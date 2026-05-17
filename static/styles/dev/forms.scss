@@ -191,6 +191,13 @@
             color: var(--error-color);
         }
     }
+
+    textarea:focus ~ label {
+        opacity: 0;
+        visibility: hidden;
+        transform: none;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
   
     textarea ~ label {
       top: 6px;

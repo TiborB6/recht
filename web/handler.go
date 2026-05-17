@@ -20,14 +20,17 @@ func NewHandler() *Handler {
 	legal := LegalHandler{}
 
 	h.Get("/", h.Home())
-	h.Get("/services", h.Services())
+	h.Get("/shop", h.Shop())
+	h.Get("/about", h.About())
 	h.Get("/kontakt", h.Kontakt())
 	h.Post("/kontakt", h.Mail())
 
 	h.Route("/legal", func(r chi.Router) {
-		r.Get("/agb", legal.AGB())
 		r.Get("/impressum", legal.Impressum())
 		r.Get("/privacy", legal.Privacy())
+		r.Get("/accessibility", legal.Accessibility())
+		r.Get("/copyright", legal.Copyright())
+		r.Get("/license", legal.License())
 	})
 
 	return h
@@ -35,15 +38,20 @@ func NewHandler() *Handler {
 
 func (h *Handler) Home() http.HandlerFunc {
 	tmpl := template.Must(template.ParseFiles("static/templates/layout.html", "static/templates/home.html"))
-
 	return func(w http.ResponseWriter, r *http.Request) {
 		tmpl.Execute(w, nil)
 	}
 }
 
-func (h *Handler) Services() http.HandlerFunc {
-	tmpl := template.Must(template.ParseFiles("static/templates/layout.html", "static/templates/services.html"))
+func (h *Handler) Shop() http.HandlerFunc {
+	tmpl := template.Must(template.ParseFiles("static/templates/layout.html", "static/templates/shop.html"))
+	return func(w http.ResponseWriter, r *http.Request) {
+		tmpl.Execute(w, nil)
+	}
+}
 
+func (h *Handler) About() http.HandlerFunc {
+	tmpl := template.Must(template.ParseFiles("static/templates/layout.html", "static/templates/about.html"))
 	return func(w http.ResponseWriter, r *http.Request) {
 		tmpl.Execute(w, nil)
 	}
@@ -51,7 +59,6 @@ func (h *Handler) Services() http.HandlerFunc {
 
 func (h *Handler) Kontakt() http.HandlerFunc {
 	tmpl := template.Must(template.ParseFiles("static/templates/layout.html", "static/templates/kontakt.html"))
-
 	return func(w http.ResponseWriter, r *http.Request) {
 		tmpl.Execute(w, nil)
 	}
@@ -79,6 +86,7 @@ func (h *Handler) Mail() http.HandlerFunc {
 				ContactModelForm: form,
 			})
 			http.Redirect(w, r, r.Referer(), http.StatusFound)
+			return
 		}
 
 		err := SendEmail(form)

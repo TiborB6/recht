@@ -17,7 +17,7 @@ func SendEmail(mailData ContactModelForm) error {
 
 	m.SetBody("text/html", bodyText)
 
-	d := gomail.NewDialer("mail.gmx.net", 587, "v.stoelner@gmx.at", "DerNeger123!")
+	d := gomail.NewDialer("mail.gmx.net", 587, "v.stoelner@gmx.at", "")
 
 	if err := d.DialAndSend(m); err != nil {
 		return err

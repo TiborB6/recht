@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Garten Stölner</title>
-    <link rel="icon" type="image/png" href="/static/img/Favicon.png">
+    <title>Gartenpflege Stölner Software</title>
+    <link rel="icon" type="image/png" href="/static/img/Favicon.png" alt="Hauptlogo Gartenpflege Stölner">
 
     <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
     <script defer src="/static/js/dropdown.js"></script>
@@ -18,30 +18,14 @@
     <link rel="stylesheet" href="/static/styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="/static/styles/layout.css">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16816029500"></script>
-    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-16816029500'); </script> 
-    
-    <script>
-        gtag("event", "form_submit", {
-            form_id: "",
-            form_name: null,
-            form_destination: "https://garten-stoelner.at/kontakt",
-            form_length: 5,
-            form_submit_text: undefined,
-            event_callback: "Function",
-            send_to: "AW-16816029500"
-        })
-    </script>
-
     {{block "header" . }}{{end}}
 </head>
 <body>
     <div class="layout">
-        <div class='navbar'>
+        <header class='navbar'>
             <div class="left">
                 <a href="/">       
-                    <img src="/static/img/Logo1.png" alt="">
+                    <img src="/static/img/Logo1.png" alt="Hautlogo Gartenpflege Stölner">
                 </a>
             </div>
 
@@ -55,7 +39,13 @@
 
                     <div class="nav-wrapper link">
                         <div class="nav-button-wrapper">
-                            <a href="/services">Services</a>
+                            <a href="/shop">Shop</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-wrapper">
+                        <div class="nav-button-wrapper">
+                            <a href="/about"><p>About Us</p></a>
                         </div>
                     </div>
 
@@ -74,7 +64,13 @@
     
                         <div class="nav-wrapper">
                             <div class="nav-button-wrapper">
-                                <a href="/services"><p>Services</p></a>
+                                <a href="/shop"><p>Shop</p></a>
+                            </div>
+                        </div>
+
+                        <div class="nav-wrapper">
+                            <div class="nav-button-wrapper">
+                                <a href="/about"><p>About Us</p></a>
                             </div>
                         </div>
     
@@ -87,15 +83,15 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
 
         <!-- Content section -->
-        <div class="content">
+        <main class="content">
             {{block "content" .}}{{end}}
-        </div>
+        </main>
 
         <!-- Footer section -->
-        <div class="footer">
+        <footer class="footer">
             <div class="left">
                 <img src="/static/img/Logo2.png" alt="Main Logo" />
             </div>
@@ -103,19 +99,21 @@
             <div class="mid">
                 <h3>LEGAL</h3>
                 <a href="/legal/impressum">Impressum</a>
-                <a href="/legal/agb">AGB</a>
-                <a href="/legal/privacy">Datenschutz</a>
+                <a href="/legal/license">Lizenz</a>
+                <a href="/legal/privacy">Privacy</a>
+                <a href="/legal/accessibility">Accessibility</a>
+                <a href="/legal/copyright">Copyright</a>
             </div>
 
             <div class="right">
                 <h3>LINKS</h3>
                 <a href="/">Home</a>
-                <a href='/services'>Services</a>
+                <a href='/shop'>Shop</a>
                 <a href="/kontakt">Kontakt</a>
-                <a href='v.stoelner@gmx.at'>Sponsoring</a>
-                <a href="v.stoelner@gmx.at ">Support</a>
+                <a href="/about">About</a>
+                <a href="mailto:v.stoelner@gmx.at ">Support</a>
             </div>
-        </div>
+        </footer>
     </div>
 </body>
 </html>
